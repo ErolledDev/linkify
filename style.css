@@ -1,0 +1,112 @@
+/* Reset default styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Main content styles */
+main {
+    display: grid;
+    grid-template-columns: 1fr minmax(0, auto) 1fr; /* Three columns: left-ad, redirect, right-ad */
+    gap: 10px;
+    padding: 10px;
+    height: 100vh; /* Adjust height as needed */
+
+    /* Center content */
+    justify-items: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+}
+
+h2 {
+    text-align: center;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #f0f0f0;
+    color: #333;
+    width: 100%;
+}
+
+/* Styles for ads */
+.left-ad, .right-ad {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px; /* Example height, adjust as needed */
+}
+
+/* Center the content */
+#redirect {
+    width: 450px; /* Fixed width for the redirect div */
+    max-width: 100%;
+    margin: 0 auto; /* Center align horizontally */
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    text-align: center;
+    overflow: hidden; /* To contain margins */
+    box-sizing: border-box; /* Include padding and border in width calculation */
+}
+
+@media (max-width: 850px) {
+    #redirect {
+        width: 100%; /* Full width on screens narrower than 850px */
+    }
+}
+
+#redirect p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    margin-bottom: 10px;
+    word-wrap: break-word; /* Ensures long words wrap */
+    overflow-wrap: break-word; /* Handles overflow in case of long words */
+}
+
+#redirect img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+#redirect h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#continueButton {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    display: none;
+    transition: background-color 0.3s;
+}
+
+#continueButton:hover {
+    background-color: #0056b3;
+}
+
+#countdown {
+    font-size: 24px;
+    color: #007bff;
+}
+
+/* Additional styles for responsive design */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr; /* Single column layout on smaller screens */
+    }
+}

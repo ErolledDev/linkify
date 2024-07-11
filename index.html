@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Standard meta tags -->
+    <meta name="keywords" content="Earn money, redirect, bitly, url forwarder, adsense, linkearn">
+    <meta name="author" content="LinkEarn">
+    
+    <!-- Open Graph meta tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+
+    <!-- Script to set meta tags dynamically -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const params = new URLSearchParams(window.location.search);
+            const url = params.get("url");
+            const image = decodeURIComponent(params.get("image"));
+            const title = decodeURIComponent(params.get("title"));
+            const description = decodeURIComponent(params.get("description"));
+
+            // Set meta tags dynamically
+            document.querySelector('meta[property="og:url"]').setAttribute('content', url || window.location.href);
+            document.querySelector('meta[property="og:title"]').setAttribute('content', title || "LinkEarn");
+            document.querySelector('meta[property="og:description"]').setAttribute('content', description || "");
+            document.querySelector('meta[property="og:image"]').setAttribute('content', image || "");
+
+            // Set page meta description
+            let metaDescription = document.querySelector('meta[name="description"]');
+            if (!metaDescription) {
+                metaDescription = document.createElement('meta');
+                metaDescription.name = 'description';
+                document.head.appendChild(metaDescription);
+            }
+            metaDescription.setAttribute('content', `${description} | LinkEarn`);
+
+            // Set page title
+            document.title = title || "LinkEarn";
+
+            // For debugging or checking values in console
+            console.log("URL:", url);
+            console.log("Image:", image);
+            console.log("Title:", title);
+            console.log("Description:", description);
+        });
+    </script>
+
+    <!-- Favicon links -->
+    <link rel="icon" type="image/png" sizes="16x16" href="icons8-coins-doodle-16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons8-coins-doodle-32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="icons8-coins-doodle-96.png">
+
+    <!-- Default title and stylesheet -->
+    <title>LinkEarn</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <!--
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+        -->
+    </header>
+    <main>
+        <div class="left-ad">
+            <script>
+                (function (sbwud) {
+                    var d = document,
+                        s = d.createElement('script'),
+                        l = d.scripts[d.scripts.length - 1];
+                    s.settings = sbwud || {};
+                    s.src = "\/\/scented-leather.com\/boXaV.sbd\/GAlW0pYZWmddiJYRWW5DudZfXKIU\/Eenmx9vuWZFUplIkfPtT_UF0JM-zHYlwgM\/zfQPt\/NaTyQFzrNXj\/AmzrNgQx";
+                    s.async = true;
+                    l.parentNode.insertBefore(s, l);
+                })({})
+            </script>
+        </div>
+
+        <div id="redirect">
+            <img src="" id="image" alt="Image">
+            <h1 id="title"></h1>
+            <p id="description"></p>
+            <span id="countdown"></span>
+            <button id="continueButton">Continue</button>
+        </div>
+
+        <div class="right-ad">
+            <script>
+                    (function (sbwud) {
+                        var d = document,
+                            s = d.createElement('script'),
+                            l = d.scripts[d.scripts.length - 1];
+                        s.settings = sbwud || {};
+                        s.src = "\/\/scented-leather.com\/boXaV.sbd\/GAlW0pYZWmddiJYRWW5DudZfXKIU\/Eenmx9vuWZFUplIkfPtT_UF0JM-zHYlwgM\/zfQPt\/NaTyQFzrNXj\/AmzrNgQx";
+                        s.async = true;
+                        l.parentNode.insertBefore(s, l);
+                    })({})
+            </script>
+        </div>
+        <!-- <div class="rss-container" id="rssFeed"></div> -->
+<!-- Popunder ads -->
+        <!-- Popunder ads end-->
+    </main>
+
+    <footer>
+        &copy; 2024 LinkEarn Made with ❤️
+    </footer>
+
+    <script src="redirect.js"></script>
+    <script src="fetchrss.js"></script>
+</body>
+
+</html>

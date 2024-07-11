@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Redirect Link</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f2f5;
+        }
+        .form-container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: auto;
+            
+            
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            margin-right: 10px;
+        }
+        .form-group input {
+            width: 350px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        
+        }
+        #generateButton {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        #generateButton:hover {
+            background-color: #0056b3;
+        }
+        #linkContainer {
+            margin-top: 15px;
+            display: none;
+        }
+        #generatedLink {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <div class="form-group">
+        <label for="url">URL:</label>
+        <input type="text" id="url" placeholder="Enter URL">
+    </div>
+    <div class="form-group">
+        <label for="image">Image URL:</label>
+        <input type="text" id="image" placeholder="Enter Image URL">
+    </div>
+    <div class="form-group">
+        <label for="title">Title:</label>
+        <input type="text" id="title" placeholder="Enter Title">
+    </div>
+    <div class="form-group">
+        <label for="description">Description:</label>
+        <input type="text" id="description" placeholder="Enter Description">
+    </div>
+    <button id="generateButton">Generate Link</button>
+    <div id="linkContainer">
+        <input type="text" id="generatedLink" readonly>
+    </div>
+</div>
+
+<script>
+    document.getElementById('generateButton').addEventListener('click', () => {
+        const url = encodeURIComponent(document.getElementById('url').value);
+        const image = encodeURIComponent(document.getElementById('image').value);
+        const title = encodeURIComponent(document.getElementById('title').value);
+        const description = encodeURIComponent(document.getElementById('description').value);
+
+        const generatedLink = `https://linkearn.vercel.app/index.html?url=${url}&image=${image}&title=${title}&description=${description}`;
+        
+        const linkInput = document.getElementById('generatedLink');
+        linkInput.value = generatedLink;
+        document.getElementById('linkContainer').style.display = 'block';
+        
+        linkInput.select();
+        linkInput.setSelectionRange(0, 99999); // For mobile devices
+        document.execCommand("copy");
+
+        alert("Link copied!");
+    });
+</script>
+
+</body>
+</html>
