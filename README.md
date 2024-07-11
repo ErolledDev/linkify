@@ -1,4 +1,4 @@
-# LinkEarn: Earn money by Link Redirection
+# Linkify: Earn money by Link Redirection
 LinkEarn is a simple web application for generating shareable links with customizable details like title, description, image, and URL. 
 ## Features
 
@@ -23,7 +23,7 @@ LinkEarn is a simple web application for generating shareable links with customi
 
 1. Clone or download the repository:
    ```bash
-   git clone https://github.com/ErolledDev/linkearn.git
+   git clone https://github.com/ErolledDev/linkify.git
 
 Navigate into the project directory:
 
