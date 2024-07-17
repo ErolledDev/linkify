@@ -1,4 +1,10 @@
 /* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -40,6 +46,7 @@ footer {
     justify-content: center;
     align-items: center;
     min-height: 100px; /* Example height, adjust as needed */
+    margin: 15px;
 }
 
 /* Center the content */
