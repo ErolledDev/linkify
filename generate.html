@@ -5,13 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Generate Redirect Link</title>
     <style>
-    
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         body {
             font-family: Arial, sans-serif;
             display: flex;
@@ -60,10 +58,8 @@
             position: relative;
             width: 250px;
         }
-       
-        
         #generatedLink {
-            width: calc(100% - 40px); /* Adjust based on button width */
+            width: calc(100% - 60px); /* Adjust based on button width */
             padding: 8px;
             border: 1px solid #ccc;
             border-radius: 4px;
@@ -72,9 +68,10 @@
         }
         #copyButton {
             position: absolute;
+            width: auto;
             right: 0;
             top: 0;
-            height: 100%;
+           
             padding: 8px 15px;
             background-color: #007bff;
             color: #fff;
@@ -110,16 +107,12 @@
     <button id="generateButton">Generate Link</button>
     <div id="linkContainer">
         <input type="text" id="generatedLink" readonly>
-       
- 
         <button id="copyButton">Copy</button>
-        
     </div>
-    
 </div>
 
 <script>
-    document.getElementById('generateButton').addEventListener('click', async () => {
+    document.getElementById('generateButton').addEventListener('click', () => {
         const url = encodeURIComponent(document.getElementById('url').value);
         const image = encodeURIComponent(document.getElementById('image').value);
         const title = encodeURIComponent(document.getElementById('title').value);
@@ -128,25 +121,9 @@
         // Constructing the long URL
         const longUrl = `https://linkified.netlify.app/index.html?url=${url}&image=${image}&title=${title}&description=${description}`;
 
-        try {
-            // Using is.gd API to shorten the long URL
-            const response = await fetch(`https://is.gd/create.php?format=json&url=${encodeURIComponent(longUrl)}`);
-            if (!response.ok) {
-                throw new Error('Failed to shorten URL');
-            }
-            const data = await response.json();
-            if (data.shorturl) {
-                const shortenedUrl = data.shorturl;
-                const linkInput = document.getElementById('generatedLink');
-                linkInput.value = shortenedUrl;
-                document.getElementById('linkContainer').style.display = 'block';
-            } else {
-                throw new Error('Shortened URL not received');
-            }
-        } catch (error) {
-            console.error('Error:', error);
-            alert('An error occurred while shortening the URL.');
-        }
+        const linkInput = document.getElementById('generatedLink');
+        linkInput.value = longUrl;
+        document.getElementById('linkContainer').style.display = 'block';
     });
 
     document.getElementById('copyButton').addEventListener('click', () => {
@@ -159,4 +136,4 @@
 </script>
 
 </body>
-</html
+</html>
