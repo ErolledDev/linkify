@@ -65,11 +65,6 @@ main .content {
     box-sizing: border-box; /* Include padding and border in width calculation */
 }
 
-@media (max-width: 850px) {
-    #redirect {
-        width: 100%; /* Full width on screens narrower than 850px */
-    }
-}
 
 #redirect p {
     font-size: 16px;
@@ -124,6 +119,6 @@ main .content {
 @media (max-width: 768px) {
     main {
         flex-direction: column; /* Single column layout on smaller screens */
-        margin-bottom: 20px;
+     
     }
     }
