@@ -17,13 +17,15 @@ body {
 /* Main content styles */
 main {
     display: flex;
-gap: 10px;
-padding: 10px;
-height: 100vh; /* Adjust height as needed */
+    gap: 10px;
+    padding: 10px;
+    flex: 1; /* Allows main to take up available space */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    flex-wrap: wrap; /* Allow content to wrap if it overflows */
+}
 
-/* Center content */
-justify-content: center; /* Center items horizontally */
-align-items: center; /* Center items vertically */
+/* Header styles */
 h2 {
     text-align: center;
 }
@@ -111,6 +113,6 @@ footer {
 /* Additional styles for responsive design */
 @media (max-width: 768px) {
     main {
-        grid-template-columns: 1fr; /* Single column layout on smaller screens */
+        flex-direction: column; /* Single column layout on smaller screens */
     }
-}
+    }
