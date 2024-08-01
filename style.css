@@ -16,14 +16,13 @@ body {
 
 /* Main content styles */
 main {
-    display: grid;
-    grid-template-columns: 1fr minmax(0, auto) 1fr; /* Three columns: left-ad, redirect, right-ad */
+    display: flex;
     gap: 10px;
     padding: 10px;
     height: 100vh; /* Adjust height as needed */
 
     /* Center content */
-    justify-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items horizontally */
     align-items: center; /* Center items vertically */
 }
 
