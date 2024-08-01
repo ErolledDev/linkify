@@ -114,6 +114,13 @@ main .content {
 }
 
 /* Additional styles for responsive design */
+
+@media (max-width: 1000px) {
+    main {
+        flex-direction: column; /* Single column layout on smaller screens */
+    }
+    }
+
 @media (max-width: 768px) {
     main {
         flex-direction: column; /* Single column layout on smaller screens */
