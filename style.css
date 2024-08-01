@@ -46,6 +46,7 @@ footer {
     align-items: center;
     min-height: 100px; /* Example height, adjust as needed */
     margin: 15px;
+    border: 0.05px solid #cecece;
 }
 
 /* Center the content */
