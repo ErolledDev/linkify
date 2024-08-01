@@ -56,10 +56,9 @@ main .content {
 #redirect {
     width: 450px; /* Fixed width for the redirect div */
     max-width: 100%;
-    margin: 0 auto; /* Center align horizontally */
+    margin: 10px 10px ; /* Center align horizontally */
     border-radius: 8px;
     padding: 20px;
-    margin-bottom: 20px;
     background-color: #fff;
     text-align: center;
     overflow: hidden; /* To contain margins */
