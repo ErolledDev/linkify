@@ -17,15 +17,13 @@ body {
 /* Main content styles */
 main {
     display: flex;
-    gap: 10px;
-    padding: 10px;
-    height: 100vh; /* Adjust height as needed */
+gap: 10px;
+padding: 10px;
+height: 100vh; /* Adjust height as needed */
 
-    /* Center content */
-    justify-content: center; /* Center items horizontally */
-    align-items: center; /* Center items vertically */
-}
-
+/* Center content */
+justify-content: center; /* Center items horizontally */
+align-items: center; /* Center items vertically */
 h2 {
     text-align: center;
 }
