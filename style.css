@@ -124,5 +124,6 @@ main .content {
 @media (max-width: 768px) {
     main {
         flex-direction: column; /* Single column layout on smaller screens */
+        margin-bottom: 20px;
     }
     }
