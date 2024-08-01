@@ -48,7 +48,10 @@ footer {
     margin: 15px;
     border: 0.05px solid #cecece;
 }
-
+main .content {
+    width: 400px;
+    height: 400px;
+}
 /* Center the content */
 #redirect {
     width: 450px; /* Fixed width for the redirect div */
