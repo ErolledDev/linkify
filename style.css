@@ -46,7 +46,7 @@ footer {
     align-items: center;
     min-height: 100px; /* Example height, adjust as needed */
     margin: 15px;
-    border: 0.05px solid #cecece;
+
 }
 main .content {
     width: 400px;
@@ -56,6 +56,7 @@ main .content {
 #redirect {
     width: 450px; /* Fixed width for the redirect div */
     max-width: 100%;
+     min-height: 100px; /* Example height, adjust as needed */
     margin: 10px 10px ; /* Center align horizontally */
     border-radius: 8px;
     padding: 20px;
