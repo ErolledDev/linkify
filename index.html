@@ -6,20 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Standard meta tags -->
-    <meta name="keywords" content="Earn money, redirect, bitly, url forwarder, adsense, Linkify">
-    <meta name="author" content="Linkify">
-    
+    <meta name="keywords" content="Linkiefied ~ Making your links awsome!">
+    <meta name="author" content="Linkiefied">
+
     <!-- Open Graph meta tags -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="">
     <meta property="og:title" content="">
     <meta property="og:description" content="">
     <meta property="og:image" content="">
-<!-- my Ads script -->
-<meta name="fc058270533b152d4222823f140c79e54218a8f3" content="fc058270533b152d4222823f140c79e54218a8f3" />
     <!-- Script to set meta tags dynamically -->
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("DOMContentLoaded", function () {
             const params = new URLSearchParams(window.location.search);
             const url = params.get("url");
             const image = decodeURIComponent(params.get("image"));
@@ -28,7 +26,7 @@
 
             // Set meta tags dynamically
             document.querySelector('meta[property="og:url"]').setAttribute('content', url || window.location.href);
-            document.querySelector('meta[property="og:title"]').setAttribute('content', title || "Linkify");
+            document.querySelector('meta[property="og:title"]').setAttribute('content', title || "~ Linkiefied");
             document.querySelector('meta[property="og:description"]').setAttribute('content', description || "");
             document.querySelector('meta[property="og:image"]').setAttribute('content', image || "");
 
@@ -56,73 +54,38 @@
     <link rel="icon" type="image/png" sizes="16x16" href="icons8-coins-doodle-16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="icons8-coins-doodle-32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="icons8-coins-doodle-96.png">
-
     <!-- Default title and stylesheet -->
-    <title>Linkify</title>
+    <title>Linkiefied</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header>
-        <!--
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
-        </nav>
-        -->
-    </header>
     <main>
 
-          <div class="container">
+        <div class="container">
+            <div class="left-ad">
+            </div>
 
-        
-        <div class="left-ad">
-            <script>
-(function(bag){
-var d = document,
-    s = d.createElement('script'),
-    l = d.scripts[d.scripts.length - 1];
-s.settings = bag || {};
-s.src = "\/\/scented-leather.com\/bjX\/V.szd\/GKln0xYTW\/dxiTYsWc5\/u\/ZTXzIH\/Ze\/m\/9qu\/Z\/Uhl\/k\/PWTFUm0mNpDOAVzrOPTDIxt\/NDTBQw0\/M\/DPM\/5\/Mowb";
-s.async = true;
-l.parentNode.insertBefore(s, l);
-})({})
-</script>
+            <div id="redirect" class="content">
+                <img src="" id="image" alt="Image">
+                <h1 id="title"></h1>
+                <p id="description"></p>
+                <span id="countdown"></span>
+                <button id="continueButton">Continue</button>
+            </div>
+
+            <div class="right-ad">
+            </div>
         </div>
 
-        <div id="redirect" class="content">
-            <img src="" id="image" alt="Image">
-            <h1 id="title"></h1>
-            <p id="description"></p>
-            <span id="countdown"></span>
-            <button id="continueButton">Continue</button>
-        </div>
-
-        <div class="right-ad">
-<script>
-(function(caf){
-var d = document,
-    s = d.createElement('script'),
-    l = d.scripts[d.scripts.length - 1];
-s.settings = caf || {};
-s.src = "\/\/scented-leather.com\/b.XJVAsRdTGulJ0oYSWgd\/iCY\/Wy5RunZUX\/It\/De\/m\/9AufZdUulukhP\/T_Uc0HN\/D_Ac0eMaTAAQtFNhTKQJ0nMhDKQJxsMyQf";
-s.async = true;
-l.parentNode.insertBefore(s, l);
-})({})
-</script>
-
-        </div>
-          </div>
-        
-         <div class="container">
+        <!--  <div class="container">
             <div class="rss-container" id="rssFeed"></div>
-        </div>
+        </div> -->
 
     </main>
 
     <footer>
-        &copy; 2024 Linkify Made with ❤️
+        &copy; 2024 Linkiefied Made with ❤️
     </footer>
 
     <script src="redirect.js"></script>
