@@ -4,18 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Standard meta tags -->
-    <meta name="keywords" content="Linkiefied ~ Making your links awsome!">
+    <meta name="keywords" content="Linkiefied ~ Making your links awesome!">
     <meta name="author" content="Linkiefied">
-
-    <!-- Open Graph meta tags -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="">
     <meta property="og:title" content="">
     <meta property="og:description" content="">
     <meta property="og:image" content="">
-    <!-- Script to set meta tags dynamically -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const params = new URLSearchParams(window.location.search);
@@ -24,13 +19,11 @@
             const title = decodeURIComponent(params.get("title"));
             const description = decodeURIComponent(params.get("description"));
 
-            // Set meta tags dynamically
             document.querySelector('meta[property="og:url"]').setAttribute('content', url || window.location.href);
             document.querySelector('meta[property="og:title"]').setAttribute('content', title || "~ Linkiefied");
             document.querySelector('meta[property="og:description"]').setAttribute('content', description || "");
             document.querySelector('meta[property="og:image"]').setAttribute('content', image || "");
 
-            // Set page meta description
             let metaDescription = document.querySelector('meta[name="description"]');
             if (!metaDescription) {
                 metaDescription = document.createElement('meta');
@@ -38,63 +31,70 @@
                 document.head.appendChild(metaDescription);
             }
             metaDescription.setAttribute('content', `${description} | Linkify`);
-
-            // Set page title
             document.title = title || "Linkify";
 
-            // For debugging or checking values in console
             console.log("URL:", url);
             console.log("Image:", image);
             console.log("Title:", title);
             console.log("Description:", description);
         });
     </script>
-
-    <!-- Favicon links -->
     <link rel="icon" type="image/png" sizes="16x16" href="icons8-coins-doodle-16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="icons8-coins-doodle-32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="icons8-coins-doodle-96.png">
-    <!-- Default title and stylesheet -->
     <title>Linkiefied</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
-
-    <div class="container">
+    <div class="wrapper">
+        <header>
+            <h1 class="logo">Linkified</h1>
+            <ul>
+                <li><a href="#" class="link">About</a></li>
+                <li><a href="#">Rss</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
 
         <main>
-
-            <div class="content">
-                <div class="box left-ad">
+            <section class="hero">
+                <div class="main-content">
+                    <img src="https://img.freepik.com/free-psd/3d-rendering-avatar_23-2150833554.jpg?t=st=1727183511~exp=1727187111~hmac=05963fdab7346f0c80edb5082f6b7cc9c29408c61f098a3d21568f7b1f3177a4&w=826" alt="image">
+                    <h1>w adsa adssa dsadas dsa asdsa asd sad sdsa sad saddads</h1>
+                    <p class="description">Lorem ipsum dolor sit amet.</p>
+                    <a href="#" class="cta">Link</a>
+                    <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+                        <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+                        <a class="a2a_button_copy_link"></a>
+                        <a class="a2a_button_facebook"></a>
+                        <a class="a2a_button_telegram"></a>
+                        <a class="a2a_button_twitter"></a>
+                        <a class="a2a_button_reddit"></a>
+                    </div>
+                    <script async src="https://static.addtoany.com/menu/page.js"></script>
                 </div>
-
-                <div id="redirect" class="box">
-                    <img src="" id="image" alt="Image">
-                    <h1 id="title"></h1>
-                    <p id="description"></p>
-                    <span id="countdown"></span>
-                    <button id="continueButton">Continue</button>
+                <div class="left ads">1</div>
+                <div class="right ads">2</div>
+            </section>
+            <section class="affiliate-links">
+                <div class="aff">
+                    <img src="https://img.freepik.com/free-psd/3d-rendering-avatar_23-2150833554.jpg?t=st=1727183511~exp=1727187111~hmac=05963fdab7346f0c80edb5082f6b7cc9c29408c61f098a3d21568f7b1f3177a4&w=826" alt="">
+                    <div class="details">
+                        <h1>The title asdsa e</h1>
+                        <a href="#" class="btn-cta">Visit</a>
+                    </div>
                 </div>
-
-                <div class="box right-ad">
-                </div>
-            </div>
+                <div class="aff">2</div>
+                <div class="aff">3</div>
+                <div class="aff">4</div>
+            </section>
+            <section class="rss-fetch" id="rssFeed">
+            </section>
         </main>
+        <footer></footer>
     </div>
 
-    <!--  <div class="container">
-            <div class="rss-container" id="rssFeed"></div>
-        </div> -->
-
-
-
-    <footer>
-        &copy; 2024 Linkiefied Made with ❤️
-    </footer>
-
-    <script src="redirect.js"></script>
     <script src="fetchrss.js"></script>
 </body>
 
