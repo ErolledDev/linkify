@@ -59,25 +59,24 @@
 
         <main>
             <section class="hero">
-                <div class="main-content">
-                    <img id="image" src="" alt="image"> <!-- Ensure src is set dynamically -->
-                    <h1 id="title"></h1>
-                    <p class="description" id="description"></p>
+             <div class="main-content">
+    <img id="image" src="" alt="Dynamic image">
+    <h1 id="title"></h1>
+    <p class="description" id="description"></p>
 
-                    <div id="countdown"></div> <!-- Countdown display -->
-                    <button id="continueButton" class="cta" style="display: none;">Continue</button>
-                    <!-- Hide CTA button initially -->
+    <div id="countdown"></div>
+    <button id="continueButton" class="cta" style="display: none;">Continue</button>
 
-                    <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
-                        <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
-                        <a class="a2a_button_copy_link"></a>
-                        <a class="a2a_button_facebook"></a>
-                        <a class="a2a_button_telegram"></a>
-                        <a class="a2a_button_twitter"></a>
-                        <a class="a2a_button_reddit"></a>
-                    </div>
-                    <script async src="https://static.addtoany.com/menu/page.js"></script>
-                </div>
+    <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+        <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+        <a class="a2a_button_copy_link"></a>
+        <a class="a2a_button_facebook"></a>
+        <a class="a2a_button_telegram"></a>
+        <a class="a2a_button_twitter"></a>
+        <a class="a2a_button_reddit"></a>
+    </div>
+    <script async src="https://static.addtoany.com/menu/page.js"></script>
+</div>
 
 
 
@@ -102,7 +101,9 @@
         </main>
         <footer></footer>
     </div>
-    <script src="redirect.jss"></script>
+      <script>countdownElement.innerText = `Please wait for ${countdown} seconds`;</script>
+
+    <script src="redirect.js"></script>
     <script src="fetchrss.js"></script>
 </body>
 
