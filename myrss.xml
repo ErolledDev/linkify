@@ -1,34 +1,52 @@
-// Fetch the RSS feed from 'myrss.xml'
-fetch('myrss.xml')
-    .then(response => response.text())
-    .then(xml => {
-        // Parse the XML string to an XML document
-        const parser = new DOMParser();
-        const xmlDoc = parser.parseFromString(xml, 'text/xml');
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+    <channel>
+        <title>Linkiefied RSS Feed</title>
+        <link>https://linkiefied.com</link>
+        <description>Your source for awesome link sharing!</description>
+        <language>en-us</language>
+        <pubDate>Sun, 24 Sep 2024 10:00:00 +0000</pubDate>
+        <lastBuildDate>Sun, 24 Sep 2024 10:00:00 +0000</lastBuildDate>
 
-        // Extract all the <item> elements from the XML
-        const items = xmlDoc.querySelectorAll('item');
+        <item>
+            <title>Exciting New Features in Linkiefied!</title>
+            <link>https://linkiefied.com/features</link>
+            <description>We’ve added new features to enhance your link sharing experience. Check them out!</description>
+            <pubDate>Sun, 24 Sep 2024 09:00:00 +0000</pubDate>
+            <guid>https://linkiefied.com/features</guid>
+        </item>
 
-        // Get the container where RSS items will be displayed
-        const rssFeed = document.getElementById('rssFeed');
+        <item>
+            <title>How to Optimize Your Links for Maximum Impact</title>
+            <link>https://linkiefied.com/blog/optimize-links</link>
+            <description>Learn tips and tricks on how to optimize your links for better engagement.</description>
+            <pubDate>Sat, 23 Sep 2024 14:30:00 +0000</pubDate>
+            <guid>https://linkiefied.com/blog/optimize-links</guid>
+        </item>
 
-        // Loop through each <item> in the RSS feed
-        items.forEach(item => {
-            const title = item.querySelector('title').textContent;
-            const link = item.querySelector('link').textContent;
-            const image = item.querySelector('image').textContent;
+        <item>
+            <title>Join Our Affiliate Program Today!</title>
+            <link>https://linkiefied.com/affiliate</link>
+            <description>Earn money by sharing your favorite links! Sign up for our affiliate program.</description>
+            <pubDate>Fri, 22 Sep 2024 12:00:00 +0000</pubDate>
+            <guid>https://linkiefied.com/affiliate</guid>
+        </item>
 
-            // Create the structure for each RSS item
-            const rssItem = document.createElement('div');
-            rssItem.classList.add('rss-items');
-            rssItem.innerHTML = `
-                <a href="${link}" target="_self">
-                    <img src="${image}" alt="${title}">
-                    <h1>${title}</h1>
-                </a>
-            `;
-            // Append each RSS item to the feed container
-            rssFeed.appendChild(rssItem);
-        });
-    })
-    .catch(error => console.error('Error fetching myrss.xml:', error));
+        <item>
+            <title>Linkiefied Community: Share Your Thoughts!</title>
+            <link>https://linkiefied.com/community</link>
+            <description>Join our community to share your ideas and connect with other link sharers!</description>
+            <pubDate>Thu, 21 Sep 2024 16:00:00 +0000</pubDate>
+            <guid>https://linkiefied.com/community</guid>
+        </item>
+
+        <item>
+            <title>Weekly Tips: How to Increase Your Click-Through Rate</title>
+            <link>https://linkiefied.com/blog/click-through-rate</link>
+            <description>Discover strategies to improve your click-through rates on shared links.</description>
+            <pubDate>Wed, 20 Sep 2024 08:00:00 +0000</pubDate>
+            <guid>https://linkiefied.com/blog/click-through-rate</guid>
+        </item>
+
+    </channel>
+</rss>
