@@ -167,7 +167,7 @@ main section {
 
 @media (max-width: 768px) {
     .hero {
-        grid-template-columns: repeat(2, minmax(200px, 1fr)); /* Two columns on mobile */
+       grid-template-columns: repeat(2, 1fr); 
         grid-template-areas:
             "content content "
             "left-ad right-ad"; /* Responsive layout */
