@@ -112,6 +112,8 @@ main section {
     grid-auto-rows: minmax(200px, 1fr); /* Auto rows */
     grid-template-areas: "left-ad content right-ad"; /* Grid areas */
     grid-gap: 10px; /* Gap between grid items */
+    width: 100vw;
+    margin: 0 auto;
 }
 
 .hero>* {
