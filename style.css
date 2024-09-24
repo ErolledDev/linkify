@@ -1,263 +1,253 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    /* outline: 1px solid tomato;
-	 */
-
+    padding: 0; /* Reset padding for all elements */
+    margin: 0; /* Reset margin for all elements */
+    box-sizing: border-box; /* Set box-sizing for consistent sizing */
+    /* outline: 1px solid tomato; */ /* Optional outline for debugging */
 }
 
 h1,
 p,
 a {
-    color: #333;
+    color: #333; /* Set default text color */
 }
 
 html {
-    font-size: 16px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px; /* Base font size */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Set font family */
 }
 
 body {
-    height: 100%;
-width: 100vw;
-    background: hsl(0, 0%, 98.5%);
+    height: 100%; /* Set body height */
+    width: 100vw; /* Full width of viewport */
+    margin: 0 auto; /* Center body */
+    background: hsl(0, 0%, 98.5%); /* Light background color */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 .wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 30px;
+    max-width: 1200px; /* Maximum width for wrapper */
+    margin: 0 auto; /* Center the wrapper */
+    padding: 0 30px; /* Horizontal padding */
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 80px;
-    width: 100%;
-    margin: 0 20px;
+    display: flex; /* Flex layout for header */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Align items vertically */
+    height: 80px; /* Set header height */
+    width: 100%; /* Full width */
+    margin: 0 20px; /* Margin on left and right */
 }
 
 header .logo {
-    font-weight: 500;
-    font-size: 1.5rem;
-    position: relative;
-    color: #333;
+    font-weight: 500; /* Logo font weight */
+    font-size: 1.5rem; /* Logo font size */
+    position: relative; /* Positioning for pseudo-element */
+    color: #333; /* Logo color */
 }
 
 header .logo::after {
-    position: absolute;
-    content: "";
-    width: 40%;
-    height: 2px;
-    background: linear-gradient(to right, #2d2d79, #00d4ff);
-    bottom: 0;
-    left: 0;
-    animation: width 2s ease-in-out infinite;
+    position: absolute; /* Position pseudo-element */
+    content: ""; /* Empty content for line */
+    width: 40%; /* Line width */
+    height: 2px; /* Line height */
+    background: linear-gradient(to right, #2d2d79, #00d4ff); /* Gradient line color */
+    bottom: 0; /* Position at the bottom */
+    left: 0; /* Align left */
+    animation: width 2s ease-in-out infinite; /* Animation for line */
 }
 
 @keyframes width {
     0% {
-        width: 0;
+        width: 0; /* Start width */
     }
-
     50% {
-        width: 100%;
+        width: 100%; /* Full width halfway */
     }
-
     100% {
-        width: 0;
+        width: 0; /* Reset width */
     }
 }
 
 header ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    list-style: none;
-
+    display: flex; /* Flex layout for navigation */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Align items vertically */
+    list-style: none; /* Remove list styling */
 }
 
 header ul li {
-    padding: 0 10px;
+    padding: 0 10px; /* Padding for list items */
 }
 
 header ul a {
-    text-decoration: none;
-    color: #000;
-    font-size: 1rem;
+    text-decoration: none; /* Remove underline from links */
+    color: #000; /* Link color */
+    font-size: 1rem; /* Link font size */
 }
 
 .cta {
-    text-decoration: none;
-    font-weight: 550;
-    display: block;
-    padding: 5px 10px;
-    border: 1px solid #000;
-    margin: 10px;
-    color: #333;
+    text-decoration: none; /* Remove underline for call-to-action */
+    font-weight: 550; /* Font weight for CTA */
+    display: block; /* Block display for button */
+    padding: 5px 10px; /* Padding for button */
+    border: 1px solid #000; /* Border for button */
+    margin: 10px; /* Margin for button */
+    color: #333; /* Button text color */
 }
 
-
 main {
-    margin: 0 auto;
-    width: 99.6875%;
+    margin: 0 auto; /* Center main content */
+    width: 99.6875%; /* Set width */
 }
 
 main section {
-    padding: 20px 0;
+    padding: 20px 0; /* Vertical padding for sections */
 }
 
 /* hero section */
 .hero {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: minmax(200px, 1fr);
-    grid-template-areas: "left-ad content right-ad";
-    grid-gap: 10px;
+    display: grid; /* Grid layout for hero section */
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+    grid-auto-rows: minmax(200px, 1fr); /* Auto rows */
+    grid-template-areas: "left-ad content right-ad"; /* Grid areas */
+    grid-gap: 10px; /* Gap between grid items */
 }
 
 .hero>* {
-    padding: 10px;
+    padding: 10px; /* Padding for hero items */
 }
 
 .hero .main-content {
-    grid-area: content;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    background: hsl(0, 0%, 100%);
-    padding: 10px;
+    grid-area: content; /* Main content area */
+    width: 100%; /* Full width */
+    display: flex; /* Flex layout for content */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    flex-direction: column; /* Column layout */
+    text-align: center; /* Center text */
+    background: hsl(0, 0%, 100%); /* White background */
+    padding: 10px; /* Padding for main content */
 }
 
 .main-content img {
-    width: 100px;
-    height: 100px;
-    border-radius: 10px;
+    width: 100px; /* Fixed width for images */
+    height: 100px; /* Fixed height for images */
+    border-radius: 10px; /* Rounded corners */
 }
 
 .main-content h1 {
-    font-weight: 600;
-    font-size: 1rem;
+    font-weight: 600; /* Font weight for title */
+    font-size: 1rem; /* Font size for title */
 }
 
 .main-content .description {
-    font-weight: 400;
-    font-size: 0.8rem;
+    font-weight: 400; /* Font weight for description */
+    font-size: 0.8rem; /* Font size for description */
 }
 
 .ads {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #000;
-    color: aliceblue;
+    display: flex; /* Flex layout for ads */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    background: #000; /* Black background for ads */
+    color: aliceblue; /* Light text color */
 }
 
 .hero :where(.left, .right) {
-    grid-area: left-ad;
-
+    grid-area: left-ad; /* Position left ad */
 }
 
 .hero .right {
-    grid-area: right-ad;
+    grid-area: right-ad; /* Position right ad */
 }
 
 @media (max-width: 768px) {
     .hero {
-        grid-template-columns: repeat(2, minmax(200px, 1fr));
+        grid-template-columns: repeat(2, minmax(200px, 1fr)); /* Two columns on mobile */
         grid-template-areas:
             "content content "
-            "left-ad right-ad";
+            "left-ad right-ad"; /* Responsive layout */
     }
 }
 
 /* affiliate links */
 .affiliate-links {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-auto-rows: minmax(100px, 1fr);
-    grid-gap: 10px;
+    display: grid; /* Grid layout for affiliate links */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+    grid-auto-rows: minmax(100px, 1fr); /* Auto rows */
+    grid-gap: 10px; /* Gap between items */
 }
 
 .affiliate-links .aff {
-    height: 100%;
-    width: 100%;
-    gap: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: hsl(0, 0%, 100%);
+    height: 100%; /* Full height for affiliate item */
+    width: 100%; /* Full width for affiliate item */
+    gap: 10px; /* Gap between items */
+    display: flex; /* Flex layout */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    background: hsl(0, 0%, 100%); /* White background */
 }
 
 .aff img {
-    width: 6.5rem;
-    height: 100%;
-    border-radius: 10px;
+    width: 6.5rem; /* Fixed width for affiliate images */
+    height: 100%; /* Full height for affiliate images */
+    border-radius: 10px; /* Rounded corners */
 }
 
 .aff .details {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    height: 100%;
-    padding: 5px 10px;
+    display: flex; /* Flex layout for details */
+    flex-direction: column; /* Column layout */
+    justify-content: space-between; /* Space between items */
+    align-items: flex-start; /* Align items to the start */
+    height: 100%; /* Full height */
+    padding: 5px 10px; /* Padding for details */
 }
 
 .details .btn-cta {
-    font-weight: 550;
-    color: #777;
+    font-weight: 550; /* Font weight for button */
+    color: #777; /* Button text color */
 }
-
 
 .details .btn-cta:hover {
-    background: #000;
+    background: #000; /* Background on hover */
 }
 
-
 .details h1 {
-    font-weight: 400;
-    font-size: 1rem;
+    font-weight: 400; /* Font weight for detail title */
+    font-size: 1rem; /* Font size for detail title */
 }
 
 /* rss fetch */
-
 .rss-fetch {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    grid-auto-rows: minmax(150px, 1fr);
-    grid-gap: 10px;
-
+    display: grid; /* Grid layout for RSS fetch */
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Responsive columns */
+    grid-auto-rows: minmax(150px, 1fr); /* Auto rows */
+    grid-gap: 10px; /* Gap between items */
 }
 
 .rss-fetch .rss-items {
-    
-    width: 100%;
-    background: hsl(0, 0%, 100%);
+    width: 100%; /* Full width for RSS items */
+    background: hsl(0, 0%, 100%); /* White background */
 }
 
 .rss-items a {
-    text-decoration: none;
-    display: flex;
-    align-items:center;
-    justify-content: space-between;
-    flex-direction: column;
-    height: 100%;
+    text-decoration: none; /* Remove underline for links */
+    display: flex; /* Flex layout for items */
+    align-items: center; /* Center vertically */
+    justify-content: space-between; /* Space between items */
+    flex-direction: column; /* Column layout */
+    height: 100%; /* Full height */
 }
 
 .rss-items img {
-    width: 100%;
-    height: 100px;
-    border-radius: 10px;
+    width: 100%; /* Full width for RSS images */
+    height: 100px; /* Fixed height for RSS images */
+    border-radius: 10px; /* Rounded corners */
 }
 
 .rss-items h1 {
-    font-weight: 500;
-    font-size: 1rem;
-    padding: 10px;
+    font-weight: 500; /* Font weight for RSS title */
+    font-size: 1rem; /* Font size for RSS title */
+    padding: 10px; /* Padding for title */
 }
