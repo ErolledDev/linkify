@@ -1,4 +1,5 @@
 // Fetch myrss.xml using fetch API
+document.addEventListener("DOMContentLoaded", function() {
 fetch('myrss.xml')
     .then(response => response.text())
     .then(xml => {
@@ -34,3 +35,4 @@ fetch('myrss.xml')
         });
     })
     .catch(error => console.error('Error fetching myrss.xml:', error));
+    });
