@@ -8,18 +8,19 @@
         <pubDate>Sun, 24 Sep 2024 10:00:00 +0000</pubDate>
         <lastBuildDate>Sun, 24 Sep 2024 10:00:00 +0000</lastBuildDate>
 
-       	<item>
-		<title>wew</title>
-		<link>https://linkified.vercel.app</link>
-		<description>weawead</description>
-		<image>https://img.freepik.com/free-psd/3d-rendering-avatar_23-2150833554.jpg?t=st=1727183511~exp=1727187111~hmac=05963fdab7346f0c80edb5082f6b7cc9c29408c61f098a3d21568f7b1f3177a4&w=826</image>
-	</item>
-        	<item>
-		<title>wew</title>
-		<link>https://linkified.vercel.app</link>
-		<description>weawead</description>
-		<image>https://img.freepik.com/free-psd/3d-rendering-avatar_23-2150833554.jpg?t=st=1727183511~exp=1727187111~hmac=05963fdab7346f0c80edb5082f6b7cc9c29408c61f098a3d21568f7b1f3177a4&w=826</image>
-	</item>
+        <item>
+            <title>wew</title>
+            <link>https://linkified.vercel.app</link>
+            <description>weawead</description>
+            <enclosure url="https://img.freepik.com/free-psd/3d-rendering-avatar_23-2150833554.jpg?t=st=1727183511~exp=1727187111~hmac=05963fdab7346f0c80edb5082f6b7cc9c29408c61f098a3d21568f7b1f3177a4&w=826" type="image/jpeg" />
+        </item>
+
+        <item>
+            <title>wew</title>
+            <link>https://linkified.vercel.app</link>
+            <description>weawead</description>
+            <enclosure url="https://img.freepik.com/free-psd/3d-rendering-avatar_23-2150833554.jpg?t=st=1727183511~exp=1727187111~hmac=05963fdab7346f0c80edb5082f6b7cc9c29408c61f098a3d21568f7b1f3177a4&w=826" type="image/jpeg" />
+        </item>
 
     </channel>
 </rss>
