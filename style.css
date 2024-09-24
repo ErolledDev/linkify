@@ -157,7 +157,7 @@ main section {
     
 }
 
-.hero :where(.left, .right) {
+.hero .left {
     grid-area: left-ad; /* Position left ad */
 }
 
