@@ -151,7 +151,10 @@ main section {
     align-items: center; /* Center vertically */
     justify-content: center; /* Center horizontally */
     background: #000; /* Black background for ads */
-    color: aliceblue; /* Light text color */
+    color: #fff; /* Light text color */
+    width: 100%;
+    height: 100%;
+    
 }
 
 .hero :where(.left, .right) {
