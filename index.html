@@ -11,34 +11,44 @@
     <meta property="og:title" content="">
     <meta property="og:description" content="">
     <meta property="og:image" content="">
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const params = new URLSearchParams(window.location.search);
-            const url = params.get("url");
-            const image = decodeURIComponent(params.get("image"));
-            const title = decodeURIComponent(params.get("title"));
-            const description = decodeURIComponent(params.get("description"));
+   <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const params = new URLSearchParams(window.location.search);
+    const url = params.get("url");
+    const image = decodeURIComponent(params.get("image"));
+    const title = decodeURIComponent(params.get("title"));
+    const description = decodeURIComponent(params.get("description"));
 
-            document.querySelector('meta[property="og:url"]').setAttribute('content', url || window.location.href);
-            document.querySelector('meta[property="og:title"]').setAttribute('content', title || "~ Linkiefied");
-            document.querySelector('meta[property="og:description"]').setAttribute('content', description || "");
-            document.querySelector('meta[property="og:image"]').setAttribute('content', image || "");
+    // Update meta tags
+    document.querySelector('meta[property="og:url"]').setAttribute('content', url || window.location.href);
+    document.querySelector('meta[property="og:title"]').setAttribute('content', title || "~ Linkiefied");
+    document.querySelector('meta[property="og:description"]').setAttribute('content', description || "");
+    document.querySelector('meta[property="og:image"]').setAttribute('content', image || "");
 
-            let metaDescription = document.querySelector('meta[name="description"]');
-            if (!metaDescription) {
-                metaDescription = document.createElement('meta');
-                metaDescription.name = 'description';
-                document.head.appendChild(metaDescription);
-            }
-            metaDescription.setAttribute('content', `${description} | Linkify`);
-            document.title = title || "Linkify";
+    // Update the main content
+    document.getElementById("image").setAttribute('src', image);
+    document.getElementById("title").innerText = title;
+    document.getElementById("description").innerText = description;
 
-            console.log("URL:", url);
-            console.log("Image:", image);
-            console.log("Title:", title);
-            console.log("Description:", description);
-        });
-    </script>
+    // Meta description fallback
+    let metaDescription = document.querySelector('meta[name="description"]');
+    if (!metaDescription) {
+        metaDescription = document.createElement('meta');
+        metaDescription.name = 'description';
+        document.head.appendChild(metaDescription);
+    }
+    metaDescription.setAttribute('content', `${description} | Linkify`);
+
+    // Set the page title
+    document.title = title || "Linkify";
+
+    console.log("URL:", url);
+    console.log("Image:", image);
+    console.log("Title:", title);
+    console.log("Description:", description);
+});
+</script>
+
     <link rel="icon" type="image/png" sizes="16x16" href="icons8-coins-doodle-16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="icons8-coins-doodle-32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="icons8-coins-doodle-96.png">
