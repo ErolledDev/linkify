@@ -11,50 +11,49 @@
     <meta property="og:title" content="">
     <meta property="og:description" content="">
     <meta property="og:image" content="">
-   <script>
-document.addEventListener("DOMContentLoaded", function () {
-    const params = new URLSearchParams(window.location.search);
-    const url = params.get("url");
-    const image = decodeURIComponent(params.get("image"));
-    const title = decodeURIComponent(params.get("title"));
-    const description = decodeURIComponent(params.get("description"));
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const params = new URLSearchParams(window.location.search);
+            const url = params.get("url");
+            const image = decodeURIComponent(params.get("image"));
+            const title = decodeURIComponent(params.get("title"));
+            const description = decodeURIComponent(params.get("description"));
 
-    // Update meta tags
-    document.querySelector('meta[property="og:url"]').setAttribute('content', url || window.location.href);
-    document.querySelector('meta[property="og:title"]').setAttribute('content', title || "~ Linkiefied");
-    document.querySelector('meta[property="og:description"]').setAttribute('content', description || "");
-    document.querySelector('meta[property="og:image"]').setAttribute('content', image || "");
+            // Update meta tags
+            document.querySelector('meta[property="og:url"]').setAttribute('content', url || window.location.href);
+            document.querySelector('meta[property="og:title"]').setAttribute('content', title || "~ Linkiefied");
+            document.querySelector('meta[property="og:description"]').setAttribute('content', description || "");
+            document.querySelector('meta[property="og:image"]').setAttribute('content', image || "");
 
-    // Update the main content
-    document.getElementById("image").setAttribute('src', image);
-    document.getElementById("title").innerText = title;
-    document.getElementById("description").innerText = description;
+            // Update the main content
+            document.getElementById("image").setAttribute('src', image);
+            document.getElementById("title").innerText = title;
+            document.getElementById("description").innerText = description;
 
-    // Meta description fallback
-    let metaDescription = document.querySelector('meta[name="description"]');
-    if (!metaDescription) {
-        metaDescription = document.createElement('meta');
-        metaDescription.name = 'description';
-        document.head.appendChild(metaDescription);
-    }
-    metaDescription.setAttribute('content', `${description} | Linkify`);
+            // Meta description fallback
+            let metaDescription = document.querySelector('meta[name="description"]');
+            if (!metaDescription) {
+                metaDescription = document.createElement('meta');
+                metaDescription.name = 'description';
+                document.head.appendChild(metaDescription);
+            }
+            metaDescription.setAttribute('content', `${description} | Linkify`);
 
-    // Set the page title
-    document.title = title || "Linkify";
+            // Set the page title
+            document.title = title || "Linkify";
 
-    console.log("URL:", url);
-    console.log("Image:", image);
-    console.log("Title:", title);
-    console.log("Description:", description);
-});
-</script>
+            console.log("URL:", url);
+            console.log("Image:", image);
+            console.log("Title:", title);
+            console.log("Description:", description);
+        });
+    </script>
 
     <link rel="icon" type="image/png" sizes="16x16" href="icons8-coins-doodle-16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="icons8-coins-doodle-32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="icons8-coins-doodle-96.png">
-    <title>Linkiefied</title>  
-    
-    <link rel="stylesheet" href="styles.css">
+    <title>Linkiefied</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
@@ -70,30 +69,29 @@ document.addEventListener("DOMContentLoaded", function () {
 
         <main>
             <section class="hero">
-             <div class="main-content">
-    <img id="image" src="" alt="Dynamic image">
-    <h1 id="title"></h1>
-    <p class="description" id="description"></p>
+                <div class="main-content">
+                    <img id="image" src="" alt="Dynamic image">
+                    <h1 id="title"></h1>
+                    <p class="description" id="description"></p>
 
-    <div id="countdown"></div>
-    <button id="continueButton" class="cta" style="display: none;">Continue</button>
+                    <div id="countdown"></div>
+                    <button id="continueButton" class="cta" style="display: none;">Continue</button>
 
-    <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
-        <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
-        <a class="a2a_button_copy_link"></a>
-        <a class="a2a_button_facebook"></a>
-        <a class="a2a_button_telegram"></a>
-        <a class="a2a_button_twitter"></a>
-        <a class="a2a_button_reddit"></a>
-    </div>
-    <script async src="https://static.addtoany.com/menu/page.js"></script>
-</div>
-
-
+                    <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+                        <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+                        <a class="a2a_button_copy_link"></a>
+                        <a class="a2a_button_facebook"></a>
+                        <a class="a2a_button_telegram"></a>
+                        <a class="a2a_button_twitter"></a>
+                        <a class="a2a_button_reddit"></a>
+                    </div>
+                    <script async src="https://static.addtoany.com/menu/page.js"></script>
+                </div>
 
                 <div class="left ads">1</div>
                 <div class="right ads">2</div>
             </section>
+
             <section class="affiliate-links">
                 <div class="aff">
                     <img src="https://img.freepik.com/free-psd/3d-rendering-avatar_23-2150833554.jpg?t=st=1727183511~exp=1727187111~hmac=05963fdab7346f0c80edb5082f6b7cc9c29408c61f098a3d21568f7b1f3177a4&w=826"
@@ -107,15 +105,16 @@ document.addEventListener("DOMContentLoaded", function () {
                 <div class="aff">3</div>
                 <div class="aff">4</div>
             </section>
-            <section class="rss-fetch" id="rssFeed">
-            </section>
+
+            <section class="rss-fetch" id="rssFeed"></section>
         </main>
         <footer></footer>
     </div>
-      <script>countdownElement.innerText = `Please wait for ${countdown} seconds`;</script>
 
     <script src="redirect.js"></script>
     <script src="fetchrss.js"></script>
+
+    
 </body>
 
 </html>
