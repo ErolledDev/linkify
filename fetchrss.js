@@ -1,11 +1,6 @@
-document.addEventListener("DOMContentLoaded", function () {
-    fetch('myrss.xml')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            return response.text();
-        })
+document.addEventListener("DOMContentLoaded", function() {
+    fetch('https://linkified.vercel.app/myrss.xml')
+        .then(response => response.text())
         .then(xml => {
             const parser = new DOMParser();
             const xmlDoc = parser.parseFromString(xml, 'text/xml');
@@ -23,15 +18,16 @@ document.addEventListener("DOMContentLoaded", function () {
             items.forEach(item => {
                 const title = item.querySelector('title').textContent;
                 const description = item.querySelector('description').textContent;
-                const image = item.querySelector('image') ? item.querySelector('image').textContent : 'default-image-url.jpg';
+                const enclosure = item.querySelector('enclosure');
+                const imageUrl = enclosure ? enclosure.getAttribute('url') : '';
                 const link = item.querySelector('link').textContent;
 
                 const rssItem = document.createElement('div');
-                rssItem.classList.add('rss-items'); // Ensure this class matches your CSS
+                rssItem.classList.add('rss-items');
 
                 rssItem.innerHTML = `
                     <a href="${link}" target="_self">
-                        <img src="${image}" alt="${title}">
+                        <img src="${imageUrl}" alt="${title}">
                         <h1>${title}</h1>
                         <p>${description}</p>
                     </a>
