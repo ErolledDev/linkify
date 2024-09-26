@@ -49,9 +49,4 @@ document.addEventListener("DOMContentLoaded", function () {
                 `;
                 rssFeed.appendChild(rssItem);
             });
-        })
-        .catch(error => {
-            console.error('Error fetching myrss.xml:', error);
-            alert('Failed to load RSS feed. Please check the console for more details.');
-        });
 });
