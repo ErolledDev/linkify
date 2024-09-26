@@ -156,7 +156,15 @@ main section {
     font-weight: 400;
     font-size: 0.8rem;
 }
-
+.main-content #continueButton {
+    all: unset;
+    background: #fff;
+    padding: 3px 8px;
+    border-radius: 5px;
+    margin: 5px 0;
+    background: hsl(147, 100%, 54%);
+    cursor: pointer;
+}
 /* Ads */
 .ads {
     display: flex;
