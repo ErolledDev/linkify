@@ -165,6 +165,10 @@ main section {
     background: hsl(147, 100%, 54%);
     cursor: pointer;
 }
+.main-content #countdown {
+    margin: 5px 0;
+    padding: 3px 8px;
+}
 /* Ads */
 .ads {
     display: flex;
