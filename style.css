@@ -115,6 +115,7 @@ main section {
     grid-auto-rows: minmax(150px, 1fr);
     grid-template-areas: "left-ad content right-ad";
     grid-gap: 10px;
+    height: 100vh
 }
 
 .hero .main-content {
